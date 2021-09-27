@@ -8,7 +8,7 @@ const NumofNotes = document.querySelectorAll(".NumofNotes");
 checkBtn.addEventListener("click", function validateBillAndCashAmount() {
     message.style.display = "none";
     if (billAmount.value > 0) {
-        console.log(billAmount.value)
+        //console.log(billAmount.value)
         if (Number(cashGiven.value) >= Number(billAmount.value)) {
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
@@ -22,10 +22,10 @@ checkBtn.addEventListener("click", function validateBillAndCashAmount() {
 } );
 
 function calculateChange(amountToBeReturned) {
-    console.log(amountToBeReturned)
+    //console.log(amountToBeReturned)
     for (let i = 0; i < Notes.length; i++) {
         const numberOfNotes = Math.trunc(amountToBeReturned / Notes[i])
-        console.log(numberOfNotes, Notes[i])
+        //console.log(numberOfNotes, Notes[i])
         amountToBeReturned = amountToBeReturned % Notes[i]
         NumofNotes[i].innerText = numberOfNotes
 
